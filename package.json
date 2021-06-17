@@ -1,0 +1,33 @@
+{
+  "name": "discord-resolve",
+  "version": "1.0.0",
+  "description": "This module groups together functions to retrieve data from different types of arguments",
+  "main": "dist/index.js",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "@types/ws": "^7.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmaugDev/discord-resolve.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "bot",
+    "resolve-data",
+    "data"
+  ],
+  "author": "SmaugDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SmaugDev/discord-resolve/issues"
+  },
+  "homepage": "https://github.com/SmaugDev/discord-resolve#readme"
+}
