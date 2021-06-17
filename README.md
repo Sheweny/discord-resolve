@@ -54,11 +54,11 @@ const {Client, Intents} = require('discord.js');
 
 const client = new Client({intents:Intents.NON_PRIVILEGED});
 const util = new DiscordResolve(client);
-client.on('message', msg => {
+client.on('message', async msg => {
   const args = msg.content.split(' ');
-  const user = util.resolveUser(args[0]) // args[0] accept id, mention, name, start of name and username + discriminator.
+  const user = await util.resolveUser(args[0]) // args[0] accept id, mention, name, start of name and username + discriminator.
   const guild = util.resolveGuild(args[1]) // args[1] accept id, and name.
-  const member = util.resolveMember(msg.guild, args[2]) // args[2] accept id, mention, username, start of username.
+  const member = await util.resolveMember(msg.guild, args[2]) // args[2] accept id, mention, username, start of username.
   const channel = util.resolveChannel(msg.guild, args[3]) // args[3] accept id, mention and name.
   const role = util.resolveRole(msg.guild, args[4]) // args[4] accept id, mention, name and start of name.
   const emoji = util.resolveGuildEmoji(msg.guild, args[5]) // args[5] accept id, name and emoji.
