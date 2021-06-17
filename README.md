@@ -52,7 +52,7 @@ Return : Boolean or undefined
 const {DiscordResolve} = require('discord-resolve');
 const {Client, Intents} = require('discord.js');
 
-const client = new Client({intents:Intents.Intents.NON_PRIVILEGED});
+const client = new Client({intents:Intents.NON_PRIVILEGED});
 const util = new DiscordResolve(client);
 client.on('message', msg => {
   const args = message.content.split(' ');
@@ -63,5 +63,5 @@ client.on('message', msg => {
   const role = util.resolveRole(message.guild, args[4]) // args[4] accept id, mention, name and start of name.
   const emoji = util.resolveGuildEmoji(message.guild, args[5]) // args[5] accept id, name and emoji.
 })
-
+client.login('token')
 ```

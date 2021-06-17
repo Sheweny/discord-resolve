@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscordResolve = void 0;
 class DiscordResolve {
     constructor(client) {
         /**
@@ -99,4 +100,4 @@ class DiscordResolve {
     }
     ;
 }
-exports.default = DiscordResolve;
+exports.DiscordResolve = DiscordResolve;

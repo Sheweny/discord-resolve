@@ -1,6 +1,6 @@
 import type { Client, Guild, GuildMember, Role, GuildEmoji, GuildChannel, User } from "discord.js";
 
-export default class DiscordResolve {
+export class DiscordResolve {
 	client;
 	constructor(client: Client) {
 		this.client = client;

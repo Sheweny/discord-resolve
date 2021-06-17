@@ -1,6 +1,6 @@
 {
   "name": "discord-resolve",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This module groups together functions to retrieve data from different types of arguments",
   "main": "dist/index.js",
   "dependencies": {
