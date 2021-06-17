@@ -13,11 +13,21 @@ class DiscordResolve {
             if (!arg || !guild || !guild.available) {
                 return;
             }
-            const member = guild.members.cache.find((mem) => mem.id === arg.replace('!', '').replace(/<@|>/g, '') || // Mention
+            let member = guild.members.cache.find((mem) => mem.id === arg.replace('!', '').replace(/<@|>/g, '') || // Mention
                 mem.user.username.toLowerCase() === arg.toLowerCase() || // Username
                 `${mem.user.username.toLowerCase()}#${mem.user.discriminator}` === arg.toLowerCase() || // Username + discriminator
                 mem.user.username.toLowerCase().startsWith(arg.toLowerCase())); // Starts with
-            return member;
+            if (!member) {
+                try {
+                    const id = arg.replace('!', '').replace(/<@|>/g, '');
+                    return guild.members.fetch(id);
+                }
+                catch {
+                    return undefined;
+                }
+            }
+            else
+                return member;
         };
         /**
          *
@@ -28,10 +38,19 @@ class DiscordResolve {
             if (!arg) {
                 return;
             }
-            const user = this.client.users.cache.find((u) => u.id === arg.replace('!', '').replace(/<@|>/g, '') ||
+            let user = this.client.users.cache.find((u) => u.id === arg.replace('!', '').replace(/<@|>/g, '') ||
                 u.username.toLowerCase() === arg.toLowerCase() ||
                 u.username.toLowerCase().startsWith(arg.toLowerCase()) ||
                 `${u.username.toLowerCase()}#${u.discriminator}` === arg.toLowerCase());
+            if (!user) {
+                try {
+                    const id = arg.replace('!', '').replace(/<@|>/g, '');
+                    return this.client.users.fetch(id);
+                }
+                catch {
+                    return undefined;
+                }
+            }
             return user;
         };
         /**
