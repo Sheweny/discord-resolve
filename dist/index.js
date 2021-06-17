@@ -13,12 +13,14 @@ class DiscordResolve {
             if (!arg || !guild || !guild.available) {
                 return;
             }
-            let member = guild.members.cache.find((mem) => mem.id === arg.replace('!', '').replace(/<@|>/g, '') || // Mention
+            let member = null;
+            guild.members.cache.find((mem) => mem.id === arg.replace('!', '').replace(/<@|>/g, '') || // Mention
                 mem.user.username.toLowerCase() === arg.toLowerCase() || // Username
                 `${mem.user.username.toLowerCase()}#${mem.user.discriminator}` === arg.toLowerCase() || // Username + discriminator
                 mem.user.username.toLowerCase().startsWith(arg.toLowerCase())); // Starts with
             if (!member) {
                 try {
+                    console.log('fetch member');
                     const id = arg.replace('!', '').replace(/<@|>/g, '');
                     return guild.members.fetch(id);
                 }
@@ -44,6 +46,7 @@ class DiscordResolve {
                 `${u.username.toLowerCase()}#${u.discriminator}` === arg.toLowerCase());
             if (!user) {
                 try {
+                    console.log('fetch user');
                     const id = arg.replace('!', '').replace(/<@|>/g, '');
                     return this.client.users.fetch(id);
                 }
