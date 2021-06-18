@@ -19,8 +19,12 @@ class DiscordResolve {
                 mem.user.username.toLowerCase().startsWith(arg.toLowerCase())); // Starts with
             if (!member) {
                 try {
-                    const id = arg.replace('!', '').replace(/<@|>/g, '');
-                    return await guild.members.fetch(id);
+                    member = await (await guild.members.fetch({ query: arg, limit: 1 })).first();
+                    if (!member) {
+                        const id = arg.replace('!', '').replace(/<@|>/g, '');
+                        member = await guild.members.fetch(id);
+                    }
+                    return member;
                 }
                 catch {
                     return undefined;
