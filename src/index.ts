@@ -22,7 +22,6 @@ export class DiscordResolve {
 			mem.user.username.toLowerCase().startsWith(arg.toLowerCase())) // Starts with
 		if (!member) {
 			try {
-				console.log('fetch member');
 				const id = arg.replace('!', '').replace(/<@|>/g, '');
 				return guild.members.fetch(id)
 			} catch {
@@ -46,8 +45,6 @@ export class DiscordResolve {
 			`${u.username.toLowerCase()}#${u.discriminator}` === arg.toLowerCase());
 		if (!user) {
 			try {
-				console.log('fetch user');
-
 				const id = arg.replace('!', '').replace(/<@|>/g, '')
 				return this.client.users.fetch(id)
 			} catch {
