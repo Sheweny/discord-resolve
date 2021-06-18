@@ -20,7 +20,7 @@ class DiscordResolve {
             if (!member) {
                 try {
                     const id = arg.replace('!', '').replace(/<@|>/g, '');
-                    return guild.members.fetch(id);
+                    return await guild.members.fetch(id);
                 }
                 catch {
                     return undefined;
@@ -34,7 +34,7 @@ class DiscordResolve {
          * @param {string} arg The argument (id, mention, username, username and discriminator, start of username )
          * @returns {User}
          */
-        this.resolveUser = (arg) => {
+        this.resolveUser = async (arg) => {
             if (!arg) {
                 return;
             }
@@ -45,7 +45,7 @@ class DiscordResolve {
             if (!user) {
                 try {
                     const id = arg.replace('!', '').replace(/<@|>/g, '');
-                    return this.client.users.fetch(id);
+                    return await this.client.users.fetch(id);
                 }
                 catch {
                     return undefined;
