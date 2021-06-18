@@ -67,7 +67,10 @@ class DiscordResolve {
             if (!guild || !arg) {
                 return;
             }
-            const channel = guild.channels.cache.find((chan) => chan.id === arg || chan.id === arg.replace(/<#|>/g, '') || chan.name === arg.toLowerCase());
+            const channel = guild.channels.cache.find((chan) => chan.id === arg ||
+                chan.id === arg.replace(/<#|>/g, '') ||
+                chan.name.toLowerCase().startsWith(arg.toLowerCase()) ||
+                chan.name === arg.toLowerCase());
             return channel;
         };
         /**
