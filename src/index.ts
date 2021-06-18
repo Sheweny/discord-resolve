@@ -23,7 +23,13 @@ export class DiscordResolve {
 		if (!member) {
 			try {
 				const id = arg.replace('!', '').replace(/<@|>/g, '');
-				return await guild.members.fetch(id)
+				member = await guild.members.fetch(id);
+
+				if (!member) {
+					member = await (await guild.members.fetch({ query: arg, limit: 1})).first();
+				}
+
+				return member;
 			} catch {
 				return undefined;
 			}
