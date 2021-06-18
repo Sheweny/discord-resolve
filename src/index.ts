@@ -16,8 +16,7 @@ export class DiscordResolve {
 			return;
 		}
 
-		let member = null
-		guild.members.cache.find((mem: GuildMember) => mem.id === arg.replace('!', '').replace(/<@|>/g, '') || // Mention
+		let member = guild.members.cache.find((mem: GuildMember) => mem.id === arg.replace('!', '').replace(/<@|>/g, '') || // Mention
 			mem.user.username.toLowerCase() === arg.toLowerCase() || // Username
 			`${mem.user.username.toLowerCase()}#${mem.user.discriminator}` === arg.toLowerCase() || // Username + discriminator
 			mem.user.username.toLowerCase().startsWith(arg.toLowerCase())) // Starts with
