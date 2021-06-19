@@ -11,41 +11,48 @@ Create a new instance of DiscordResolve with the client has a parameter. Example
 - `resolveUser(arg)` : Get a user.  
 Parameter :  
   - arg : Id, mention, name, start of name, name + discriminator. (string)  
-Return : User or undefined  
+
+  Return : User or undefined  
   
 - `resolveGuild(arg)` : Get a guild.  
 Parameter :  
   - arg : Name or id of guild. (string)  
-Return : Guild or undefined  
+
+  Return : Guild or undefined  
   
 - `resolveMember(guild, arg)` : Get a guild member.  
 Parameter :  
   - guild : The guild (Guild)  
   - arg : Id, mention, username, start of username. (string)  
-Return : Member or undefined  
+
+  Return : Member or undefined  
   
 - `resolveChannel(guild, arg)` : Get a guild channel.  
 Parameter :  
   - guild : The guild (Guild)  
-  - arg : Id, mention, name  (string)  
-Return : GuildChannel or undefined  
+  - arg : Id, mention, name, start of name. (string)  
+
+  Return : GuildChannel or undefined  
   
 - `resolveRole(guild, arg)` : Get a guild role.  
 Parameter :  
   - guild : The guild (Guild)  
   - arg : Id, mention, name, start of name. (string)  
-Return : Role or undefined  
+  
+  Return : Role or undefined  
   
 - `resolveGuildEmoji(guild, arg)` : Get a guild emoji.  
 Parameter :  
   - guild : The guild (Guild)  
-  - arg : Id, name, emoji. (string)  
-Return : GuildEmoji or undefined  
+  - arg : Id, name, emoji. (string)
+
+  Return : GuildEmoji or undefined  
   
 - `resolveModo(member)` : Check if user is modo.  
 Parameter :  
   - member : GuildMember
-Return : Boolean or undefined  
+
+  Return : Boolean or undefined  
 
 ```js
 
