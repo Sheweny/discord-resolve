@@ -1,11 +1,11 @@
 {
   "name": "discord-resolve",
-  "version": "1.2.0",
+  "version": "1.2.0-beta.0",
   "description": "This module groups together functions to retrieve data from different types of arguments",
   "main": "dist/index.js",
   "types": "./typing/index.d.ts",
   "dependencies": {
-    "discord.js": "^12.5.3"
+    "discord.js": "^13.0.0-dev.t1627732975.331a9d3"
   },
   "devDependencies": {
     "@types/node": "^15.12.2",

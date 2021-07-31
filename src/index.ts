@@ -1,4 +1,4 @@
-import type { Client, Guild, GuildMember, Role, GuildEmoji, GuildChannel, User } from "discord.js";
+import type { Client, Guild, GuildMember, Role, GuildEmoji, GuildChannel, ThreadChannel, User } from "discord.js";
 
 export class DiscordResolve {
 	client;
@@ -68,7 +68,7 @@ export class DiscordResolve {
 		if (!guild || !arg) {
 			return;
 		}
-		const channel = guild.channels.cache.find((chan: GuildChannel) =>
+		const channel = guild.channels.cache.find((chan: GuildChannel | ThreadChannel) =>
 			chan.id === arg ||
 			chan.id === arg.replace(/<#|>/g, '') ||
 			chan.name.toLowerCase().startsWith(arg.toLowerCase()) ||
