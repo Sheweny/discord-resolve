@@ -1,4 +1,4 @@
-import type { Client, Guild, GuildMember, Role, GuildEmoji, GuildChannel } from "discord.js";
+import type { Client, Guild, GuildMember, Role, GuildEmoji, GuildChannel, ThreadChannel } from "discord.js";
 export declare class DiscordResolve {
     client: any;
     constructor(client: Client);
@@ -21,7 +21,7 @@ export declare class DiscordResolve {
      * @param {string} arg The argument (id, mention, name)
      * @returns {GuildChannel}
      */
-    resolveChannel: (guild: Guild, arg: string) => GuildChannel;
+    resolveChannel: (guild: Guild, arg: string) => GuildChannel | ThreadChannel;
     /**
      *
      * @param {string} arg The argument (id, name)
@@ -41,11 +41,11 @@ export declare class DiscordResolve {
      * @param {string} arg The argument (id, name, emoji )
      * @returns {GuildEmoji}
      */
-    resolveGuildEmoji: (guild: Guild, arg: string) => Promise<GuildEmoji>;
+    resolveGuildEmoji: (guild: Guild, arg: string) => GuildEmoji;
     /**
      *
      * @param {GuildMember} member
      * @returns {boolean}
      */
-    resolveModo: (member: GuildMember) => Promise<boolean>;
+    resolveModo: (member: GuildMember) => boolean;
 }

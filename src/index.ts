@@ -108,7 +108,7 @@ export class DiscordResolve {
 	 * @param {string} arg The argument (id, name, emoji )  
 	 * @returns {GuildEmoji}
 	 */
-	resolveGuildEmoji = async (guild: Guild, arg: string) => {
+	resolveGuildEmoji = (guild: Guild, arg: string) => {
 		if (!guild || !arg) return null;
 		const emoji = guild.emojis.cache.find((e: GuildEmoji) =>
 			e.id == arg || e.name == arg) ||
@@ -120,7 +120,7 @@ export class DiscordResolve {
 	 * @param {GuildMember} member
 	 * @returns {boolean}
 	 */
-	resolveModo = async (member: GuildMember) => {
+	resolveModo = (member: GuildMember) => {
 		if (member.permissions.has('ADMINISTRATOR') || member.permissions.has('MANAGE_GUILD') || member.permissions.has('BAN_MEMBERS')) return true;
 		return false;
 	}
