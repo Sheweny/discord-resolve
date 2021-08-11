@@ -13,13 +13,13 @@ Node.js 16.6.0 or newer is required.
 With npm :
 
 ```sh-session
-npm install discord-resolve
+npm install @discord-util/resolve
 ```
 
 With yarn :
 
 ```sh-session
-yarn add discord-resolve
+yarn add @discord-util/resolve
 ```
 
 ## Usage
@@ -29,13 +29,13 @@ Import the module from node_modules :
 With CommonJS syntax :
 
 ```js
-const { DiscordResolve } = require("discord-resolve");
+const { DiscordResolve } = require("@discord-util/resolve");
 ```
 
 With module syntax :
 
 ```js
-import { DiscordResolve } = from 'discord-resolve';
+import { DiscordResolve } = from '@discord-util/resolve';
 ```
 
 Create a new instance of DiscordResolve with the client has a parameter.
@@ -125,7 +125,7 @@ Return : Boolean
 ## Example
 
 ```js
-const { DiscordResolve } = require("discord-resolve");
+const { DiscordResolve } = require("@discord-util/resolve");
 const { Client, Intents } = require("discord.js");
 
 const client = new Client({
