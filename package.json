@@ -9,7 +9,7 @@
     "access": "public"
   },
   "dependencies": {
-    "discord.js": "^13.0.1"
+    "discord.js": "^13.1.0"
   },
   "devDependencies": {
     "@types/node": "^15.12.2",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smaug6739/discord-resolve.git"
+    "url": "git+https://github.com/Sheweny/discord-resolve.git"
   },
   "keywords": [
     "discord",
@@ -33,7 +33,7 @@
   "author": "Smaug6739",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Smaug6739/discord-resolve/issues"
+    "url": "https://github.com/Sheweny/discord-resolve/issues"
   },
-  "homepage": "https://github.com/Smaug6739/discord-resolve#readme"
+  "homepage": "https://github.com/Sheweny/discord-resolve#readme"
 }
