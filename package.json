@@ -28,7 +28,8 @@
     "discord.js",
     "bot",
     "resolve-data",
-    "data"
+    "data",
+    "discord-data"
   ],
   "author": "Smaug6739",
   "license": "MIT",
