@@ -41,7 +41,7 @@ import { DiscordResolve } from '@sheweny/resolve';
 Create a new instance of DiscordResolve with the client has a parameter.
 
 ```js
-const resolve = new DiscordResolve(client)`.
+const resolve = new DiscordResolve(client).
 ```
 
 ## Methods
