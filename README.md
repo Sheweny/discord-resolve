@@ -1,5 +1,7 @@
 # Discord-resolve
 
+Sheweny plugin
+
 This module groups together functions to retrieve data from different types of arguments. The functions group together all the possible cases each time (id, mention, name, start of name, name + tag). This module can also be used with slash-commands to give several options to a user.
 
 ## Getting Started
