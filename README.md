@@ -134,7 +134,7 @@ const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
 });
 const util = new DiscordResolve(client);
-client.on("message", async (msg) => {
+client.on("messageCreate", async (msg) => {
   const args = msg.content.split(" ");
   const user = await util.resolveUser(args[0]); // args[0] accept id, mention, name, start of name and username + discriminator.
   const guild = util.resolveGuild(args[1]); // args[1] accept id, and name.
