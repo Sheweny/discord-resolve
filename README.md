@@ -37,7 +37,7 @@ const { DiscordResolve } = require("@sheweny/resolve");
 With module syntax :
 
 ```js
-import { DiscordResolve } from '@sheweny/resolve';
+import { DiscordResolve } from "@sheweny/resolve";
 ```
 
 Create a new instance of DiscordResolve with the client has a parameter.
@@ -60,6 +60,10 @@ Parameters :
 
 Return : User or undefined
 
+```js
+const user = await resolve.resolveUser("@Sheweny#1234");
+```
+
 ## resolveGuild(arg)
 
 Get a guild in common with the bot.
@@ -67,6 +71,10 @@ Get a guild in common with the bot.
 Parameters :
 
 - arg : Name or id of guild. (string)
+
+```js
+const guild = resolve.resolveGuild("Sheweny's server");
+```
 
 Return : Guild or undefined
 
@@ -81,6 +89,10 @@ Parameters :
 
 Return : GuildMember or undefined
 
+```js
+const member = await resolve.resolveMember(guild, "@Sheweny#1234");
+```
+
 ## resolveChannel(guild, arg)
 
 Get a guild channel from a guild.
@@ -91,6 +103,10 @@ Parameters :
 - arg : Id, mention, name, start of name. (string)
 
 Return : GuildChannel or undefined
+
+```js
+const channel = resolve.resolveChannel(guild, "general");
+```
 
 ## resolveRole(guild, arg)
 
@@ -103,6 +119,10 @@ Parameters :
 
 Return : Role or undefined
 
+```js
+const role = resolve.resolveRole(guild, "@everyone");
+```
+
 ## resolveGuildEmoji(guild, arg)
 
 Get a emoji from a guild.
@@ -114,6 +134,10 @@ Parameters :
 
 Return : GuildEmoji or undefined
 
+```js
+const emoji = resolve.resolveGuildEmoji(guild, ":smile:");
+```
+
 ## resolveModo(member)
 
 Check if user have a moderator permissions (ADMINISTRATOR, MANAGE_GUILD or BAN_MEMBERS).
@@ -123,6 +147,10 @@ Parameters :
 - member : GuildMember
 
 Return : Boolean
+
+```js
+const isModo = resolve.resolveModo(member);
+```
 
 ## Example
 
