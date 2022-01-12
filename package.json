@@ -1,6 +1,6 @@
 {
   "name": "@sheweny/resolve",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "This module groups together functions to retrieve data from different types of arguments",
   "main": "lib/index.js",
   "types": "./typing/index.d.ts",
