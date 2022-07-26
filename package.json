@@ -10,8 +10,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "discord.js": "^13.1.0",
-    "@types/node": "^17.0.0",
+    "discord.js": "^14.0.2",
+    "@types/node": "^18.0.0",
     "@types/ws": "^8.2.2"
   },
   "scripts": {
